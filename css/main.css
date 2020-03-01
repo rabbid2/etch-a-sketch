@@ -1,18 +1,19 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #a3d0c3;
-    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "header header header""logo1 div logo2";
+    grid-template-rows: 1fr 44.1vw;
+    grid-template-columns: 1fr 65.1vw 1fr;
 
 }
 
 .container {
+    grid-area: div;
     background-color: #7ba7ab;
-    width: 1240px;
-    height: 840px;
     padding: 20px;
-    border-radius: 30px;
+    padding-top: 0;
 }
 
 .grid {
@@ -22,9 +23,30 @@ body {
     background-color: antiquewhite;
 }
 
+.header {
+    grid-area: header;
+    background-color: #7ba7ab;
+    display: grid;
+    grid-template-areas: ". info input output ."". info button output .";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 300px 350px 300px 1fr;
+}
+
+.info, .output {
+    grid-area: info;
+    color: antiquewhite;
+    user-select: none;
+    font-size: 22px;
+    padding: 15px 0;
+    margin: 10px 35px;
+}
+
+.output {
+    grid-area: output;
+}
 
 input, button {
-    display: block;
+    grid-area: input;
     height: 40px;
     width: 350px;
     border: 0;
@@ -32,43 +54,45 @@ input, button {
     font-size: 18px;
     background-color: antiquewhite;
     padding: 0 20px;
-    margin: 0.5vw;
+    margin-top: 10px;
     color: #7ba7ab;
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 button {
-    background-color: #7ba7ab;
+    grid-area: button;
+    margin-bottom: 10px;
+    background-color: #a3d0c3;
     color: antiquewhite;
 }
 
 button:hover, input:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .etch, .sketch {
-    position: fixed;
-    font-size: 250px;
-    transform: rotate(270deg);
-    top: 380px;
+    font-size: 13.12vw;
     color: antiquewhite;
-    width: 722px;
-    height: 280px;
     user-select: none;
+    text-align: center;
+    writing-mode: sideways-lr;
+
+    -webkit-writing-mode: sideways-lr;
+    -ms-writing-mode: sideways-lr;
 }
 
 .etch {
-    left: -200px;
+    grid-area: logo1;
 }
 
-.sketch{
-    right: -200px;
+.sketch {
+    grid-area: logo2;
 }
 
-
-button::-moz-focus-inner{   
+button::-moz-focus-inner {   
     border : 0px;
 }
-    
-button:focus{     
+
+button:focus {     
     outline : none; 
 }

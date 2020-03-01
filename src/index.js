@@ -5,7 +5,7 @@ btn.addEventListener(`click`, game);
 
 function game(){
     let numberOfColumn = 1;
-    if (document.querySelector(`.grid`)) document.querySelector(`.container`).remove();
+    if (document.querySelector(`.grid`)) document.querySelector(`.grid`).remove();
 
     let playerValue=input.value;
     input.placeholder=`Введите количество столбцов`;

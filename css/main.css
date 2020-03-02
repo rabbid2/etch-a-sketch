@@ -4,7 +4,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-areas: "header header header""logo1 div logo2";
-    grid-template-rows: 1fr 44.1vw;
+    grid-template-rows: 5.77vw 44.1vw;
     grid-template-columns: 1fr 65.1vw 1fr;
 
 }
@@ -12,7 +12,7 @@ body {
 .container {
     grid-area: div;
     background-color: #7ba7ab;
-    padding: 20px;
+    padding: 1.05vw;
     padding-top: 0;
 }
 
@@ -29,16 +29,16 @@ body {
     display: grid;
     grid-template-areas: ". info input output ."". info button output .";
     grid-template-rows: auto;
-    grid-template-columns: 1fr 300px 350px 300px 1fr;
+    grid-template-columns: 1fr 15.75vw 18.37vw 15.75vw 1fr;
 }
 
 .info, .output {
     grid-area: info;
     color: antiquewhite;
     user-select: none;
-    font-size: 22px;
-    padding: 15px 0;
-    margin: 10px 35px;
+    font-size: 1.15vw;
+    padding: 0.79vw 0;
+    margin: 0.53vw 1.84vw;
 }
 
 .output {
@@ -47,14 +47,14 @@ body {
 
 input, button {
     grid-area: input;
-    height: 40px;
-    width: 350px;
+    height: 2.1vw;
+    width: 18.37vw;
     border: 0;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 1.15vw;
     background-color: antiquewhite;
-    padding: 0 20px;
-    margin-top: 10px;
+    padding: 0 1.05vw;
+    margin-top: 0.53vw;
     color: #7ba7ab;
     font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -75,10 +75,13 @@ button:hover, input:hover {
     color: antiquewhite;
     user-select: none;
     text-align: center;
-    writing-mode: sideways-lr;
-
-    -webkit-writing-mode: sideways-lr;
-    -ms-writing-mode: sideways-lr;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    
+    letter-spacing: 0.5vw;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 .etch {
